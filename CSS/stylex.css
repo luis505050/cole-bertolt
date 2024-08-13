@@ -1,0 +1,236 @@
+
+*{
+    margin: auto;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4{
+    font-family: Lucida Calligraphy;
+}
+.carousel-item img {
+    width: 100%;   
+    height: 500px; 
+    object-fit: cover ; 
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+}
+
+.footer p {
+    margin: 0;
+}
+/* Botones flotantes */
+.floating-buttons {
+    position: fixed;
+    top: 50%;
+    left: 2px; /* Ajusta el margen desde el borde izquierdo */
+    transform: translateY(-50%); /* Centra verticalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-floating {
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0% 70% 60% 60%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-floating:hover {
+    background-color: #0056b3;
+}
+/* card---boostraps */
+/* .card {
+    position: relative;
+    width: 50%;
+    max-width: 400px; 
+  }
+  
+  .card-img {
+    width: 100%;
+    height: auto; 
+  }
+  
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.25rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .card-title, .card-text {
+    font-weight: bold; 
+    color: #0410bd; 
+  }*/
+/* img1 */
+.container-imganes-eventos, .container-carrusel-tips {
+    max-width: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    padding: 10px;
+}
+
+.img1 img, .img2 img {
+    width: 350px;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+/* Flexbox para el contenedor de imágenes */
+.container-imganes-eventos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si no caben en una sola línea */
+    justify-content: center; /* Centra los elementos en el contenedor */
+    gap: 10px; /* Espacio entre los elementos */
+    background-color: #888888;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si no caben en una sola línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+/* Estilos específicos para el carrusel de imágenes */
+.carousel-tips {
+    position: relative;
+    max-width: 350px; /* Ajusta el ancho máximo al 100% del contenedor */
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid #000;
+    margin: auto;
+    margin-left: 250px;
+}
+
+.carousel-images-tips {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images-tips img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para los botones del carrusel */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.prev {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-imganes-eventos {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .img1, .img2 {
+        max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    }
+    
+    .carousel-tips {
+        max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+    }
+}
+/* bloque de infraestructura */
+/* Contenedor principal para las imágenes y el iframe */
+.container-fotos-infra {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Centrar los elementos verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si no caben en una línea */
+    padding: 20px; /* Espacio interno alrededor del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del contenedor */
+    max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #f0f0f0; /* Fondo claro para distinguir los elementos, puedes cambiarlo según tu diseño */
+}
+
+/* Estilos para los elementos internos */
+.infra-1, .infra-2, .infra-3 {
+    flex: 1 1 auto; /* Permite que los elementos crezcan y se encojan según sea necesario */
+    max-width: 300px; /* Ajusta el ancho máximo de cada elemento */
+    border-radius: 10px; /* Bordes redondeados para los elementos */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto de profundidad */
+}
+
+/* Estilos para las imágenes */
+.img-infraestructura {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor padre */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Estilos para los iframes */
+iframe {
+    width: 200%; /* Asegura que el iframe ocupe el 100% del ancho del contenedor padre */
+    height: 500%; /* Ajusta la altura del iframe, puedes modificar según sea necesario */
+    border: none; /* Elimina el borde del iframe */
+    display: block; /* Elimina el espacio debajo del iframe */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container-fotos-infra {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos horizontalmente en pantallas pequeñas */
+    }
+
+    .infra-1, .infra-2, .infra-3 {
+        max-width: 100%; /* Asegura que los elementos no excedan el ancho del contenedor en pantallas pequeñas */
+    }
+
+    iframe {
+        height: 150px; /* Ajusta la altura del iframe en pantallas pequeñas */
+    }
+}
+/* reseñas */
+.container-rese {
+    border: 1px solid #000;
+}
+.img-reseñas{
+    width: 100%;
+    height: 500px;
+}
